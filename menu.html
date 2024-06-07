@@ -5,53 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <style>
-        /*
-        öncelik sırası::after
-        inline styling
-        id selector
-        class selector
-        tag selector
-        
-        */
+        /*Flexbox */
 
-        /*
+        body {
+            font-size: 16px;
+        }
 
-        inline styling
-        head-> style tag'i
-        dış .css dosyası
-        
-        */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 2fr;
 
-        /* tag selector */
-        div-1 {
+
+        }
+
+        .container>div {
             background-color: lightcoral;
-            width: 400px;
-            height: 300px;
             border: 5px solid green;
-            margin: 12px 24px;
-            padding: 40px 8px;
-            border-radius: 32px 16px;
-            box-sizing: border-box
-                /*content-box*/
-            ;
+            height: 200px;
 
-            /*content-box = width + padding*/
-            /*border-box = width
-            
+
+
+        }
+
+
+        .div-1 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3
         }
 
         .div-2 {
-            background-color: aquamarine;
-            width: 400px;
-            height: 300px;
-            border: 5px solid black;
-            margin: 12px 24px;
-            box-sizing: border-box
-                /*content-box*/
-            ;
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
 
+        .div-3 {
+            grid-column: 1 / 2;
+        }
+
+        .div-4 {}
+
+        .div-5 {
+            grid-column: 3 /5;
 
         }
     </style>
@@ -59,15 +60,44 @@
 
 <body>
 
-    <div class='div-1'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus voluptatum fugiat quas similique
-        repellendus sit dicta aliquid, ducimus esse. Perferendis commodi adipisci architecto, eaque a atque! Aliquid
-        iusto sequi sapiente.
+    <div class='container'>
+        <div class='div-1'>
+
+            1
+
+        </div>
+
+        <div class='div-2'>
+
+            2
+
+        </div>
+        <div class='div-3'>
+
+            3
+
+        </div>
+
+        <div class='div-4'>
+
+            4
+
+        </div>
+
+        <div class='div-5'>
+
+            5
+
+        </div>
     </div>
 
-    <div class='div-2'>
-        Welcome
-    </div>
+
+
+
+
+
+
+
 </body>
 
 </html>

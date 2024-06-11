@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: thistle;
+            text-align: center;
+            position: sticky ;
+            top: 0;
+        }
+        body {
+            display: flex;   
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        main {
+            display: fuchsia;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 2fr;            
+        }
+        footer {
+            background-color: thistle;
+            text-align: center;
+            position: sticky ;
+            bottom: 0;
+        }
+        @media screen and (min-width: 600px){
+            main{
+                background-color: lightcoral;
+                text-align: left;
+            }
+        }
+
+        @media screen and (min-width: 800px){
+            main{
+                background-color: lightblue;
+                text-align: right;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Design</h1>
+    </header>
+    <main>Main</main>
+    <footer>Footer</footer>
+    
+</body>
+</html>
